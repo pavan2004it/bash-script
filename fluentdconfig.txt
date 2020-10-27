@@ -1,0 +1,16 @@
+# fluentd config file
+
+{
+   "log-driver": "fluentd",
+   "log-opts": {
+     "fluentd-address": "localhost:24224"
+   }
+ }
+
+ 
+ 927114234
+ 
+ 937966112875
+ 
+ 968884307
+ 312801736

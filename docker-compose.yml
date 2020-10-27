@@ -1,0 +1,38 @@
+version: '3.3'
+services:
+  web:
+    image: httpd
+    ports:
+      - "8086:80"
+    depends_on:
+      - fluentd
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: httpd.access
+
+  fluentd:
+    image: fluentdenterprise
+    volumes:
+      - /root/fluentd/conf:/etc/td-agent-enterprise
+    depends_on:
+      - "elasticsearch"
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+
+  elasticsearch:
+    image: elasticsearch
+    expose:
+       - 9200
+    ports:
+       - "9200:9200"
+
+  kibana:
+    image: kibana
+    depends_on:
+        - "elasticsearch"
+    ports:
+        - "5610:5601"
+

@@ -1,0 +1,202 @@
+[‎5/‎11/‎2018 3:47 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+No Title 
+Add-AzureAccount 
+Login-AzureRmAccount
+Select-AzureSubscription -SubscriptionId 1d092a51-1f34-4307-ba91-473d2f8c6b52
+
+Select-AzureRmSubscription -Tenant '0e40e941-d00f-41f3-aef9-6ac89e16fbc6'
+Register-AzureRmProviderFeature -FeatureName ClassicInfrastructureMigrate -ProviderNamespace Microsoft.ClassicInfrastructureMigrate
+Register-AzureRmResourceProvider -ProviderNamespace Microsoft.ClassicInfrastructureMigrate
+
+$vnet='Group RG1 RG1VNET1'
+$storage1='portalvhdscfzcv2rn60bf5'
+$storage2='rg1vm1diag1'
+
+#migrate vnet
+Move-AzureVirtualNetwork -Validate -VirtualNetworkName $vnet -verbose -debug
+Move-AzureVirtualNetwork -Prepare -VirtualNetworkName $vnet -Verbose -Debug
+Move-AzureVirtualNetwork -Commit -VirtualNetworkName $vnet -Verbose -Debug
+Move-AzureVirtualNetwork -Abort -VirtualNetworkName $vnet -Verbose -Debug
+
+
+#migrate storage
+Move-AzureStorageAccount -Validate -StorageAccountName $storage2 -Verbose -Debug
+Move-AzureStorageAccount -Prepare -StorageAccountName $storage2 -Verbose -Debug
+Move-AzureStorageAccount -Commit -StorageAccountName $storage2 -Verbose -Debug
+Move-AzureStorageAccount -Abort -StorageAccountName $storage2 -Verbose -Debug
+
+Get-AzureRmSubscription -SubscriptionId '54226190-d9df-4644-870a-b4077054b113' 
+ 
+ 
+ 
+ [‎5/‎11/‎2018 2:16 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+HI Pavan
+good afternoon
+ 
+[‎5/‎11/‎2018 2:16 PM]  
+can we have a call in 30 minutes
+ 
+[‎5/‎11/‎2018 2:16 PM]  
+sharp
+ 
+[‎5/‎11/‎2018 2:17 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+sue
+sure
+*
+when ever you are free ping me
+ 
+We saved this conversation. You'll see it soon in the Conversations tab in Skype for Business and in the Conversation History folder in Outlook. 
+[‎5/‎11/‎2018 3:10 PM]  
+hi raghavendar
+ 
+[‎5/‎11/‎2018 3:10 PM]  
+let me know if you are free 
+ 
+[‎5/‎11/‎2018 3:11 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+5 min pavan
+ 
+[‎5/‎11/‎2018 3:11 PM]  
+sure
+ 
+We saved this conversation. You'll see it soon in the Conversations tab in Skype for Business and in the Conversation History folder in Outlook. 
+[‎5/‎11/‎2018 3:19 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+hi pavan
+ 
+[‎5/‎11/‎2018 3:19 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+can you join on skype call
+ 
+[‎5/‎11/‎2018 3:21 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+or lmi
+ 
+[‎5/‎11/‎2018 3:21 PM]  
+sure
+ 
+[‎5/‎11/‎2018 3:21 PM]  
+i will call you 
+ 
+[‎5/‎11/‎2018 3:22 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+in skype?
+ 
+[‎5/‎11/‎2018 3:22 PM]  
+yup
+ 
+[‎5/‎11/‎2018 3:22 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+ok
+ 
+[‎5/‎11/‎2018 3:26 PM]  
+calling now
+ 
+[‎5/‎11/‎2018 3:27 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+ok any luck
+ 
+Connected to Raghavendar Madhavaram (MINDTREE LIMITED) (v-ramadh@microsoft.com).  
+[‎5/‎11/‎2018 3:47 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+No Title 
+Add-AzureAccount 
+Login-AzureRmAccount
+Select-AzureSubscription -SubscriptionId 54226190-d9df-4644-870a-b4077054b113
+Select-AzureRmSubscription -Tenant '0e40e941-d00f-41f3-aef9-6ac89e16fbc6'
+Register-AzureRmProviderFeature -FeatureName ClassicInfrastructureMigrate -ProviderNamespace Microsoft.ClassicInfrastructureMigrate
+Register-AzureRmResourceProvider -ProviderNamespace Microsoft.ClassicInfrastructureMigrate
+
+$vnet='Group RG1 RG1VNET1'
+$storage1='rg1vm1strg1'
+$storage2='rg1vm1diag1'
+
+#migrate vnet
+Move-AzureVirtualNetwork -Validate -VirtualNetworkName $vnet -verbose -debug
+Move-AzureVirtualNetwork -Prepare -VirtualNetworkName $vnet -Verbose -Debug
+Move-AzureVirtualNetwork -Commit -VirtualNetworkName $vnet -Verbose -Debug
+Move-AzureVirtualNetwork -Abort -VirtualNetworkName $vnet -Verbose -Debug
+
+
+#migrate storage
+Move-AzureStorageAccount -Validate -StorageAccountName $storage2 -Verbose -Debug
+Move-AzureStorageAccount -Prepare -StorageAccountName $storage2 -Verbose -Debug
+Move-AzureStorageAccount -Commit -StorageAccountName $storage2 -Verbose -Debug
+Move-AzureStorageAccount -Abort -StorageAccountName $storage2 -Verbose -Debug
+
+Get-AzureRmSubscription -SubscriptionId '54226190-d9df-4644-870a-b4077054b113' 
+ 
+[‎5/‎11/‎2018 3:58 PM]  
+i will be right back
+ 
+[‎5/‎11/‎2018 4:08 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+Add-AzureAccount 
+ 
+[‎5/‎11/‎2018 4:12 PM]  
+ PS C:\WINDOWS\system32> Add-AzureAccount
+Add-AzureAccount : No subscriptions are associated with the logged in account in Azure Service Management (RDFE). This means that the logged 
+in user is not an administrator or co-administrator for any account.\r\nDid you mean to execute Connect-AzureRmAccount?
+At line:1 char:1
++ Add-AzureAccount
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (:) [Add-AzureAccount], ArgumentException
+    + FullyQualifiedErrorId : Microsoft.WindowsAzure.Commands.Profile.AddAzureAccount  
+ 
+[‎5/‎11/‎2018 4:15 PM]  
+ DEBUG: 4:04:17 PM - MoveVirtualNetworkCommand begin processing with ParameterSet 'ValidateMigrationParameterSet'.
+VERBOSE: 4:04:20 PM - Begin Operation: Move-AzureVirtualNetwork
+Move-AzureVirtualNetwork : No default subscription has been designated. Use Select-AzureSubscription -Default <subscriptionName> to set the 
+default subscription.
+At line:1 char:1
++ Move-AzureVirtualNetwork -Validate -VirtualNetworkName $vnet -verbose ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : CloseError: (:) [Move-AzureVirtualNetwork], ApplicationException
+    + FullyQualifiedErrorId : Microsoft.WindowsAzure.Commands.ServiceManagement.IaaS.Network.MoveVirtualNetworkCommand  
+ 
+[‎5/‎11/‎2018 4:34 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+Get-AzureRmResourceProvider -ProviderNamespace Microsoft.ClassicInfrastructureMigrate 
+ 
+[‎5/‎11/‎2018 4:43 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+2 min pavan
+ 
+[‎5/‎11/‎2018 4:43 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+will be back
+ 
+[‎5/‎11/‎2018 4:50 PM]  
+118051118167832  
+ 
+[‎5/‎11/‎2018 4:53 PM]  
+118051118167845  
+ 
+[‎5/‎11/‎2018 5:01 PM]  
+i will be right back
+ 
+[‎5/‎11/‎2018 5:13 PM]  
+we have to follow the same procedure
+ 
+[‎5/‎11/‎2018 5:13 PM]  
+all the cloud services are in same network
+ 
+[‎5/‎11/‎2018 5:14 PM]  Raghavendar Madhavaram (MINDTREE LIMITED):  
+No Title 
+Add-AzureAccount 
+Login-AzureRmAccount
+Select-AzureSubscription -SubscriptionId 54226190-d9df-4644-870a-b4077054b113
+Select-AzureRmSubscription -Tenant '0e40e941-d00f-41f3-aef9-6ac89e16fbc6'
+Register-AzureRmProviderFeature -FeatureName ClassicInfrastructureMigrate -ProviderNamespace Microsoft.ClassicInfrastructureMigrate
+Register-AzureRmResourceProvider -ProviderNamespace Microsoft.ClassicInfrastructureMigrate
+
+$cs='rg4cs1'
+$storage1='zlportalvhds9kjt08nyhphw'
+
+
+#migrate cs
+Move-AzureService -Validate -ServiceName $cs -DeploymentName $cs -CreateNewVirtualNetwork -Debug -Verbose
+Move-AzureService -Prepare -ServiceName $cs -DeploymentName $cs -CreateNewVirtualNetwork -Debug -Verbose
+Move-AzureService -Commit -ServiceName 'rg4cs1' -DeploymentName 'rg4cs1'
+Move-AzureService -Abort -ServiceName $cs -DeploymentName $cs -CreateNewVirtualNetwork -Debug -Verbose
+
+
+#migrate storage
+Move-AzureStorageAccount -Validate -StorageAccountName $storage1 -Verbose -Debug
+Move-AzureStorageAccount -Prepare -StorageAccountName $storage1 -Verbose -Debug
+Move-AzureStorageAccount -Commit -StorageAccountName $storage1 -Verbose -Debug
+Move-AzureStorageAccount -Abort -StorageAccountName $storage1 -Verbose -Debug
+
+
+Revoke-AzureRmDiskAccess -ResourceGroupName 'RG3' -DiskName 'RG3VM1_OsDisk_1_2262f2111e17490fa6b642eb5e69afd1' 
+ 
+
+RITM0058796 access for mike in citrix
